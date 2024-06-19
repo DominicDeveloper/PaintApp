@@ -13,6 +13,9 @@ import com.asadbek.paintapp.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
+    // Boshqa bir klass ichida chaqirilishi kerak bo`lgani uchun
+    // o`zgaruvchilarni object ichiga olindi
     companion object {
         var path = Path()
         var paint_brush = Paint()
@@ -25,22 +28,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnBlack.setOnClickListener {
-            Toast.makeText(this,"CLicked",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Black",Toast.LENGTH_SHORT).show()
             paint_brush.color  = Color.BLACK
             currentColor(paint_brush.color)
         }
         binding.btnBlue.setOnClickListener {
-            Toast.makeText(this,"CLicked",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Blue",Toast.LENGTH_SHORT).show()
             paint_brush.color  = Color.BLUE
             currentColor(paint_brush.color)
         }
         binding.btnPurple.setOnClickListener {
-            Toast.makeText(this,"CLicked",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Magenta",Toast.LENGTH_SHORT).show()
             paint_brush.color  = Color.MAGENTA
             currentColor(paint_brush.color)
         }
         binding.btnYellow.setOnClickListener {
-            Toast.makeText(this,"CLicked",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Yellow",Toast.LENGTH_SHORT).show()
             paint_brush.color  = Color.YELLOW
             currentColor(paint_brush.color)
         }
@@ -49,6 +52,7 @@ class MainActivity : AppCompatActivity() {
             pathList.clear()
             colorList.clear()
             path.reset()
+            Toast.makeText(this, "Cleared!", Toast.LENGTH_SHORT).show()
         }
 
     }
