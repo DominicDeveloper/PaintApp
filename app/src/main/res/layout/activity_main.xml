@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/lnt"
+        android:layout_height="0dp">
+        <include layout="@layout/view_display"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lnt"
+        android:background="@drawable/tools_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="82dp">
+
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="10dp"
+            android:id="@+id/btnPurple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            android:layout_width="60dp"
+            android:backgroundTint="@color/purple"
+            android:layout_height="60dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="10dp"
+            android:id="@+id/btnYellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            android:layout_width="60dp"
+            android:backgroundTint="@color/yellow"
+            android:layout_height="60dp"/>
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="10dp"
+            android:id="@+id/btnBlue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_width="60dp"
+            android:backgroundTint="@color/blue"
+            android:layout_height="60dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="10dp"
+            android:id="@+id/btnBlack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            android:layout_width="60dp"
+            android:backgroundTint="@color/blaack"
+            android:layout_height="60dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/main"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            android:id="@+id/btnCleaner"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_cleaning_services_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
